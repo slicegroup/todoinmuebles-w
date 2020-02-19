@@ -496,11 +496,9 @@
     padding: 0 10px;
 }
 
-
 </style>
 <script>
 var expanded = false;
-
 function showCheckboxes() {
   var checkboxes = document.getElementById("checkboxes");
   if (!expanded)  {
