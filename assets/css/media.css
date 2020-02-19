@@ -1,0 +1,244 @@
+
+
+@media screen and (min-width: 0px) and (max-width: 767px) {
+
+  .todoin-serv{
+  display: block;
+  }
+
+  .todoin{
+    display: block;
+    text-align: center;
+  }
+
+  .todoin img{
+    width: 325px;
+  }
+
+  .logo img {
+    width: 250px;
+  }
+	
+	
+	.with_frm_style .frm_form_fields{
+		width:auto!important;
+  }
+  
+  .renta-bg {
+    height: 120vh;
+  }
+
+  .btn-whatsapp i {
+    bottom: 7rem;
+  }
+
+  h1{
+    font-size: 35px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h3{
+    font-size: 15px;
+  }
+
+  h4{
+    font-size: 15px;
+    padding: 20px;
+  }
+
+  .btn-whatsapp img{
+    height: 4rem;
+    width: 4rem;
+  }
+
+  .filtro{
+    display: block;
+    padding: 25px;
+  }
+
+  label{
+    font-size: 15px;
+    margin: 5%;
+  }
+
+  .serv-bg{
+    height: auto;
+  }
+
+  .formulario{
+    width: auto;
+        padding: 15px;
+  }
+
+  .menu-left{
+    width: auto!important;
+  }
+
+  .view-product{
+    display: block;
+  }
+
+  .content-product{
+    margin: 0;
+    width: auto;
+  }
+
+  .content-product1{
+     margin: 0;
+    width: auto;
+  }
+
+  .more-info{
+    display: block;
+  }
+  .re{
+    width: auto;
+  }
+
+  .propiedad{
+    height: auto;
+    width: auto;
+  }
+
+  .divide{
+    height: auto;
+  }
+
+  .detail{
+      width: auto;
+      display: block;
+      margin-left: 0;
+
+  }
+
+  .caract {
+    display: block;
+    justify-content: space-between;
+   width: auto;
+    text-align: inherit;
+}
+
+  .caraterics {
+display: block;
+width: auto;
+    text-align: center;
+    padding-top: 30px;
+}
+.card-body{
+  width: 100%!important;
+}
+.file-two img {
+  
+    width: 100%!important;
+  }
+/* 
+  .content-information{
+    height: auto;
+  } */
+
+ .file-two {
+    margin-left: 0px;
+    margin-bottom: 25px;
+    padding: 20px;
+
+}
+
+  .card-body h5{
+    text-align: center;
+  }
+
+  .nav__menu.--is-open {
+    transform: translate(0, 0);
+    height: 100vh;
+    padding: 123px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-item{
+    margin: 10%;
+  }
+
+  .card-body p{
+    text-align: center;
+  }
+
+  .file-one{
+    margin: 20%;
+  }
+
+  fieldset{
+    padding-bottom: 100px!important;
+  }
+
+  .frm_forms{
+    width: auto!important;
+  }
+
+  .buttons-1 {
+    margin-left: -12%;
+    margin-top: 5%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+  .todoin-serv{
+    display: block;
+  }
+
+    .file-two{
+    text-align: center;
+  }
+
+  .card-body h5{
+    text-align: center;
+  }
+
+  .card-body p{
+    text-align: center;
+  }
+
+  .formulario{
+        width: 80%;
+  }
+}
+
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+ 
+}
+
+@media screen and (min-width: 800px) and (max-width: 1280px) {
+ 
+
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+
+ .formulario{    
+	  width: 80%;
+  }
+  
+  .content-product {
+    width: 40%;
+    margin-left: -4%;
+  }
+
+  .detail {
+    display: flex;
+    flex-wrap: wrap;
+    width: 104%;
+    margin-left: 0;
+}
+
+.content-product1 {
+    width: 50%;
+    margin-left: 7%;
+}
+	
+
+}
