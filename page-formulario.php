@@ -49,7 +49,7 @@
           <div class="selectop">
             <label for="ubicacion">
               Ubicación </label>
-              <select onchange="ShowSelected();" name="ubicacion" id="ubicacion" tabindex="-1" aria-hidden="true">
+              <select onchange="ShowSelected();" name="ubicacion" id="ubication" tabindex="-1" aria-hidden="true">
                 <option value=""></option>
                 <option value="Medellín -Antioquia">Medellín -Antioquia </option>
                 <option value="Barranquilla">Barranquilla</option>
@@ -98,6 +98,9 @@
                 <option value=""></option>
                 <option value="$ 900,000"> $ 900.000</option>
                 <option value="$ 1,100,000">$ 1,100,000</option>
+                <option value="$ 1,150,000">$ 1,150,000</option>
+                <option value="$ 1,400,000">$ 1,400,000</option>
+                <option value="$ 2,800,000">$ 2,800,000</option>
               </select>
           </div>
           <!-- <div class="selectop">
@@ -161,14 +164,14 @@
                     <input value="Si " type="checkbox" id="gas" /> Gas domiciliario
                   </label>
                     <label for="seven">
-                    <input value="Si" type="checkbox" id="zona" /> Zona_Lavanderia
+                    <input value="Si" type="checkbox" id="zona" /> Zona Lavanderia
                   </label>
                 </select>
             </div>
       </form>
     </div>
   </div>
-  <div class="todoin-serv" id="properties-container">
+  <div class="todoin-serv" id="properties-container" >
     <!-- <div class="file-two">
       <div class="">
         <img style=" width: 300px;" src="<?php echo get_template_directory_uri(); ?>/assets/img/news-post-7-680x510.jpg" alt="">
@@ -185,8 +188,7 @@
       </div>
     </div> -->
 
-
-       <div class="file-two">
+     <!-- <div class="file-two">
         <div class="img-card">
           <img style=" width: 300px;" src="<?php echo get_template_directory_uri(); ?>/assets/img/news-post-7-680x510.jpg" alt="">
         </div>
@@ -200,14 +202,17 @@
             <div>54m²</div>
           </div>
         </div>
-      </div>
-
-  </div>
+      </div> -->
+    </div>
+    <div id="no-result">
+      <span class="search">Selecciona tu</span> <h1 class="search">búsqueda</h1>
+    </div>
   </section>
+
   <script>
     $(document).ready(function () {
+      renderCards();
       console.log('ready')
-
       var ubication = ''
       var tipo = ''
       var estado = ''
@@ -221,76 +226,14 @@
       var saloncomunal = ''
       var zona = ''
 
-
-      var data = {
-        authtoken: '034d2711716cb3cbfe88099c5f47beba',
-        zc_ownername: 'nube_dinamica',
-        scope: 'creatorapi'
-      }
-
-      $('#ubicacion').change(function() {
-        ubication = $(this).val()
-        renderCards()
-      })
-
-      $('#tipo').change(function() {
-        tipo = $(this).val()
-        renderCards()
-      })
-
-      $('#estado').change(function() {
-        estado = $(this).val()
-        renderCards()
-      })
-
-       $('#estrato').change(function() {
-        estrato = $(this).val()
-        renderCards()
-      })
-
-      $('#precio').change(function() {
-        precio = $(this).val()
-        renderCards()
-      })
-
-      $('#metros').change(function() {
-        metros = $(this).val()
-        renderCards()
-      })
-
-      $('#anti').change(function() {
-        anti = $(this).val()
-        renderCards()
-      })
-
-
-      $('#Ascensor').change(function() {
-        var check = $("#Ascensor:checked")[0];
-        Ascensor = check ? $(this).val() : ''
-        renderCards()
-      })
-
-
-      $('#piscina').change(function() {
-        var check = $("#piscina:checked")[0];
-        piscina = check ? $(this).val() : ''
-        renderCards()
-      })
-
-     $('#gas').change(function() {
-        var check = $("#gas:checked")[0];
-        gas = check ? $(this).val() : ''
-        renderCards()
-      })
-
-      $('#zona').change(function() {
-        var check = $("#zona:checked")[0];
-        zona = check ? $(this).val() : ''
-        renderCards()
-      })
-  
       function renderCards() {
-        // Ascensor = 'Si'
+
+        var data = {
+          authtoken: '034d2711716cb3cbfe88099c5f47beba',
+          zc_ownername: 'nube_dinamica',
+          scope: 'creatorapi'
+        }
+
         $.ajax({
           dataType: 'jsonp',
           method: 'GET',
@@ -303,12 +246,12 @@
             var filteredData = []
 
             const data = response['Inmuebles']
+            console.log(data)
 
-            if (ubicacion != '') {
+            if (ubication != '') {
               filteredData = data.filter(function(e) {
                 return e['Ciudad'] == ubication
               })
-        
             }
 
             if (tipo != '') {
@@ -378,20 +321,71 @@
               })
             }
 
-          
+            $('#ubication').change(function() {
+              ubication = $(this).val()
+              renderCards()
+            })
 
+            $('#tipo').change(function() {
+              tipo = $(this).val()
+              renderCards()
+            })
+
+            $('#estado').change(function() {
+              estado = $(this).val()
+              renderCards()
+            })
+
+              $('#estrato').change(function() {
+              estrato = $(this).val()
+              renderCards()
+            })
+
+            $('#precio').change(function() {
+              precio = $(this).val()
+              renderCards()
+            })
+
+            $('#metros').change(function() {
+              metros = $(this).val()
+              renderCards()
+            })
+
+            $('#anti').change(function() {
+              anti = $(this).val()
+              renderCards()
+            })
+
+            $('#Ascensor').change(function() {
+              var check = $("#Ascensor:checked")[0];
+              Ascensor = check ? $(this).val() : ''
+              renderCards()
+            })
+
+            $('#piscina').change(function() {
+              var check = $("#piscina:checked")[0];
+              piscina = check ? $(this).val() : ''
+              renderCards()
+            })
+
+            $('#gas').change(function() {
+              var check = $("#gas:checked")[0];
+              gas = check ? $(this).val() : ''
+              renderCards()
+            })
+
+            $('#zona').change(function() {
+              var check = $("#zona:checked")[0];
+              zona = check ? $(this).val() : ''
+              renderCards()
+            })
 
             console.log('filter', filteredData)
-
-            // var ar = filteredData[0].Ascensor;
-
-            // if(ar == 'Si'){
-            //   console.log(ar);
-              
-            // }else{
-            //   console.log("NO");
-              
-            // }
+            if (filteredData.length != 0) {
+              $("#no-result").hide();
+            } else {
+              $("#no-result").show();
+            }
 
             filteredData.map(function(property) {
               console.log('property', property)
@@ -401,8 +395,9 @@
           error: function (error) {
             console.log(error.statusText);
           },
-       });
-      }
+       });   
+    }renderCards();    
+
     });
 
 

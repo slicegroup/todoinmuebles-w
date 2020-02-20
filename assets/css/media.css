@@ -68,9 +68,13 @@
     height: auto;
   }
 
+  .search {
+    font-size: 35px;
+  }
+
   .formulario{
     width: auto;
-        padding: 15px;
+    padding: 15px;
   }
 
   .menu-left{
@@ -177,11 +181,20 @@ width: auto;
 
   .frm_forms{
     width: auto!important;
+    padding: 15px;
+  }
+
+  .buttons{
+    margin-top: 10%;
   }
 
   .buttons-1 {
     margin-left: -12%;
     margin-top: 5%;
+  }
+
+  #checkboxes {
+    text-align: initial;
   }
 }
 

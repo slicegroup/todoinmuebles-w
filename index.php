@@ -114,7 +114,8 @@
         <h3>Genera ingresos extra y obtén beneficios únicos.</h3>
       </div>
       <div class="buttons">
-        <div class="button">Más info</div>
+        <a href="#contacto">
+        <div class="button" >Más info</div></a>
       </div>
   </section>
   <!-- SECCION ALIADO -->

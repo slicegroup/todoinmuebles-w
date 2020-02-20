@@ -918,8 +918,34 @@ width: 100%!important;
     margin-left: 10%;
 }
 
+#no-result{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#no-result h1{
+  color: #74ee15;
+  margin-top: 7px;
+  margin-left: 9px;
+}
+
+.frm_full, .frm_full .wp-editor-wrap, .frm_full input:not([type='checkbox']):not([type='radio']):not([type='button']), .frm_full select, .frm_full textarea {
+    width: 100% !important;
+    color: #fff;
+}
+
+.search{
+  color: #021639;
+    font-family: 'Bebas Neue';
+    font-size: 45px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
 ul{
-      color: #021639;
+    color: #021639;
     font-size: 15px;
 }
 
