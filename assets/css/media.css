@@ -218,6 +218,8 @@ width: auto;
   .formulario{
         width: 80%;
   }
+
+    body{background-repeat: inherit!important;}
 }
 
 
@@ -253,5 +255,11 @@ width: auto;
     margin-left: 7%;
 }
 	
+.serv-bg {
+    /* background-image: url(../img/Background-2.jpg)!important; */
+    background-position: center!important;
+    margin-top: 22%;
+}
 
+  body{background-repeat: inherit!important;}
 }

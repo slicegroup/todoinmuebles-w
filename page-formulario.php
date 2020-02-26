@@ -96,11 +96,11 @@
               <select name="precio" id="precio" class="selectop goog-te-combo" data-select2-id="select-min-price" tabindex="-1"
                 aria-hidden="true">
                 <option value=""></option>
-                <option value="$ 900,000"> $ 900.000</option>
-                <option value="$ 1,100,000">$ 1,100,000</option>
-                <option value="$ 1,150,000">$ 1,150,000</option>
-                <option value="$ 1,400,000">$ 1,400,000</option>
-                <option value="$ 2,800,000">$ 2,800,000</option>
+                <option value="300000"> Menor a $300,000</option>
+                <option value="$900,000"> Menor a $ 900,000 </option>
+                <option value="1200000">Menor a $1,200,000</option>
+                <option value="2000000"> Menor a $ 2,000,000</option>
+                <option value="2500000">Mayor a $2,500,000</option>
               </select>
           </div>
           <!-- <div class="selectop">
@@ -211,7 +211,6 @@
 
   <script>
     $(document).ready(function () {
-      renderCards();
       console.log('ready')
       var ubication = ''
       var tipo = ''
@@ -225,101 +224,6 @@
       var piscina = ''
       var saloncomunal = ''
       var zona = ''
-
-      function renderCards() {
-
-        var data = {
-          authtoken: '034d2711716cb3cbfe88099c5f47beba',
-          zc_ownername: 'nube_dinamica',
-          scope: 'creatorapi'
-        }
-
-        $.ajax({
-          dataType: 'jsonp',
-          method: 'GET',
-          url: 'https://creator.zoho.com/api/json/inmuebles/view/Inmuebles_Report',
-          data: data,
- 
-          success: function (response) {
-            var propertiesContainer = $('#properties-container');
-            propertiesContainer.html('')
-            var filteredData = []
-
-            const data = response['Inmuebles']
-            console.log(data)
-
-            if (ubication != '') {
-              filteredData = data.filter(function(e) {
-                return e['Ciudad'] == ubication
-              })
-            }
-
-            if (tipo != '') {
-              filteredData = data.filter(function(e) {
-                return e['Tipo'] == tipo
-              })
-            }
-
-            if (estado != '') {
-              filteredData = data.filter(function(e) {
-                return e['Estado'] == estado
-              })
-            }
-
-            if (estrato != '') {
-              filteredData = data.filter(function(e) {
-                return e['Estrato'] == estrato
-              })
-            }
-
-            if (precio != '') {
-              filteredData = data.filter(function(e) {
-                return e['Valor_arriendo'] == precio
-              })
-            }
-
-
-            if (metros != '') {
-              filteredData = data.filter(function(e) {
-                return e['M2'] == metros
-              })
-            }
-
-            if (anti != '') {
-              filteredData = data.filter(function(e) {
-                return e['A_o_construcci_n'] == anti
-              })
-            }
-
-            if (Ascensor === 'Si') {
-              filteredData = data.filter(function(e) {
-                return e['Ascensor'] == Ascensor
-              })
-            }
-
-            if (piscina === 'No') {
-              filteredData = data.filter(function(e) {
-                return e['pisicina'] == piscina
-              })
-            }
-
-            if (saloncomunal === 'No') {
-              filteredData = data.filter(function(e) {
-                return e['Sal_n_comunal'] == saloncomunal
-              })
-            }
-
-            if (gas === 'Si') {
-              filteredData = data.filter(function(e) {
-                return e['Gas_domiciliario'] == gas
-              })
-            }
-
-            if (zona === 'Si') {
-              filteredData = data.filter(function(e) {
-                return e['Zona_lavanderia'] == zona
-              })
-            }
 
             $('#ubication').change(function() {
               ubication = $(this).val()
@@ -380,6 +284,108 @@
               renderCards()
             })
 
+      function renderCards() {
+
+        var data = {
+          authtoken: '034d2711716cb3cbfe88099c5f47beba',
+          zc_ownername: 'nube_dinamica',
+          scope: 'creatorapi'
+        }
+
+        $.ajax({
+          dataType: 'jsonp',
+          method: 'GET',
+          url: 'https://creator.zoho.com/api/json/inmuebles/view/Inmuebles_Report',
+          data: data,
+ 
+          success: function (response) {
+            var propertiesContainer = $('#properties-container');
+            propertiesContainer.html('')
+            var filteredData = []
+
+            const data = response['Inmuebles']
+            console.log(data)
+
+            if (ubication != '') {
+              filteredData = data.filter(function(e) {
+                return e['Ciudad'] == ubication
+              })
+            }
+
+            if (tipo != '') {
+              filteredData = data.filter(function(e) {
+                return e['Tipo'] == tipo
+              })
+            }
+
+            if (estado != '') {
+              filteredData = data.filter(function(e) {
+                return e['Estado'] == estado
+              })
+            }
+
+            if (estrato != '') {
+              filteredData = data.filter(function(e) {
+                return e['Estrato'] == estrato
+              })
+            }
+
+            if (precio != '') {
+              filteredData = data.filter(function(e) {
+                return e['Valor_arriendo'] < $(this).val();
+              })
+            }
+            //    if (precio != '') {
+            //   filteredData = data.filter(function(e) {
+            //     return e['Valor_arriendo'] == precio
+            //   })
+            // }
+
+            if (metros != '') {
+              filteredData = data.filter(function(e) {
+                return e['M2'] == metros
+              })
+            }
+
+            if (anti != '') {
+              filteredData = data.filter(function(e) {
+                return e['A_o_construcci_n'] == anti
+              })
+            }
+
+            if (Ascensor === 'Si') {
+              filteredData = data.filter(function(e) {
+                return e['Ascensor'] == Ascensor
+              })
+            }
+
+            if (piscina === 'No') {
+              filteredData = data.filter(function(e) {
+                return e['pisicina'] == piscina
+              })
+            }
+
+            if (saloncomunal === 'No') {
+              filteredData = data.filter(function(e) {
+                return e['Sal_n_comunal'] == saloncomunal
+              })
+            }
+
+            if (gas === 'Si') {
+              filteredData = data.filter(function(e) {
+                return e['Gas_domiciliario'] == gas
+              })
+            }
+
+            if (zona === 'Si') {
+              filteredData = data.filter(function(e) {
+                return e['Zona_lavanderia'] == zona
+              })
+            }
+
+          
+
+
             console.log('filter', filteredData)
             if (filteredData.length != 0) {
               $("#no-result").hide();
@@ -396,7 +402,7 @@
             console.log(error.statusText);
           },
        });   
-    }renderCards();    
+    }  
 
     });
 

@@ -272,19 +272,19 @@
                     <div class="detail">
                       <div  class="caraterics">
                         <img style="" src="<?php echo get_template_directory_uri(); ?>/assets/img/bed.svg" alt="">
-                        <p> 3 habitaciones</p>
+                        <p> 3 Habitaciones</p>
                       </div>  
                           <div  class="caraterics">
                         <img style="" src="<?php echo get_template_directory_uri(); ?>/assets/img/bathroom.svg" alt="">
-                        <p> ${property['Ba_os']} baños</p> 
+                        <p> ${property['Ba_os']} Baños</p> 
                       </div>  
                           <div  class="caraterics">
                         <img style="" src="<?php echo get_template_directory_uri(); ?>/assets/img/house.svg" alt="">
-                        <p>${property['A_o_construcci_n']} año</p>
+                        <p>${property['A_o_construcci_n']} Año</p>
                       </div>  
                           <div  class="caraterics">
                         <img style="" src="<?php echo get_template_directory_uri(); ?>/assets/img/tape-measure.svg" alt="">
-                        <p>${property['M2']}</p>
+                        <p>${property['M2']} m²</p>
                       </div>  
                           <div  class="caraterics">
                         <img style="" src="<?php echo get_template_directory_uri(); ?>/assets/img/area (1).svg" alt="">
@@ -292,9 +292,9 @@
                       </div>  
                           <div  class="caraterics">
                         <img style="" src="<?php echo get_template_directory_uri(); ?>/assets/img/parking-lot.svg" alt="">
-                        <p> ${property['Parqueaderos']} parqueadores</p>
+                        <p> ${property['Parqueaderos']} Parqueaderos</p>
                       </div>  
-                      <hr></hr>
+                      <hr class="clas-carac"></hr>
                       <div class="caract">
                         <div class="caract-one">
                           <p>Características</p>
@@ -321,7 +321,7 @@
                           </ul>
                         </div>
                       </div>
-                      <hr></hr>
+                      <hr style="margin-top: 0rem;"></hr>
                       <div class="gastos">
                         <p style="font-weight:bold;">Gastos Mensuales</p>
                         <div class="more-info">
@@ -331,23 +331,23 @@
                           </div>
                           <div class="propiedad">
                             <p>Administración</p>
-                            <p  style="font-weight:bold;">$0</p>
+                            <p  style="font-weight:bold;">${property['Vr_administraci_n']}</p>
                           </div>
                             <div class="propiedad">
                             <p>Luz</p>
-                            <p  style="font-weight:bold;">$66</p>
+                            <p  style="font-weight:bold;">${property['Luz']}</p>
                           </div>
                             <div class="propiedad">
-                            <p>Gas Natural</p>
-                            <p  style="font-weight:bold;">$17.036</p>
+                            <p>Gas Natural  </p>
+                            <p  style="font-weight:bold;">${property['Gas_natural']}</p>
                           </div>
                             <div class="propiedad">
-                            <p>Acueducto</p>
-                            <p  style="font-weight:bold;">$65</p>
+                            <p>Acueducto </p>
+                            <p  style="font-weight:bold;">${property['Acueducto']}</p>
                           </div>
                             <div class="propiedad">
                             <p>Telefonía/Internet</p>
-                            <p  style="font-weight:bold;">$132</p>
+                            <p  style="font-weight:bold;">${property['Telefon_a_Internet']}</p>
                           </div>
                         </div>
                       </div>
@@ -356,9 +356,9 @@
                       <h4>TOTAL</h4>
                       <p>gastos</p>
                       <p>mensuales</p>
-                          <p>$1.997.975</p>
+                          <p>${property['Total_gastos']}</p>
                       </div>
-                      <hr></hr>
+                      <hr class="re-line"></hr>
                     </div>
                     </div>
                 `

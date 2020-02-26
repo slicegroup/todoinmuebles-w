@@ -65,7 +65,7 @@
     <div class="title-banner">
       <div class="todoin">
         <h1>SI TIENES UNA PROPIEDAD</h1>
-        <h3>Nosotros podemos administrarla.</h3>
+        <h3>Nosotros podemos administrarla</h3>
         <h4>Bien sea para alquilar o vender, no te preocupes por
           <br> cobros, con nosotros tienes tu plata fija mes a mes.</h4>
       </div>
@@ -96,8 +96,8 @@
     <div class="title-banner">
       <div class="todoin">
         <h1>SI NECESITAS RENTAR</h1>
-        <h3>Lo hacemos más rápido y sin mucho papeleo.</h3>
-        <h4>Te ofrecemos las más amplia oferta inmuebles
+        <h3>Lo hacemos más rápido y sin mucho papeleo</h3>
+        <h4>Te ofrecemos las más amplia oferta de inmuebles
           <br> con un trato 100% personalizado.</h4>
       </div>
         <a href="<?php echo bloginfo('url').'/index.php/formulario/'; ?>" class="send">
@@ -111,7 +111,7 @@
     <div class="title-banner">
       <div class="todoin">
         <h1>SÉ UN ALIADO</h1>
-        <h3>Genera ingresos extra y obtén beneficios únicos.</h3>
+        <h3>Genera ingresos extra y obtén beneficios únicos</h3>
       </div>
       <div class="buttons">
         <a href="#contacto">
