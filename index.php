@@ -138,12 +138,12 @@
         </div>
         <div class="file-one">
           <h1 style="font-size: 35px;">DISEÑAMOS TUS SUEÑOS</h1>
-           <p>Esos muebles y ese closet que
-            <br>sueñas lo puedes, nuestra línea
-            <br> de decoración y muebles está a
+           <p>Diseñamos objetos y mobiliario a medida,
+            <br>nuestra línea de decoración y 
+            <br> muebles está a tu disposición
             <br> tu disposición.</p>
        
-          <img style="padding: 10%; width: 130px" src="<?php echo get_template_directory_uri(); ?>/assets/img/LOGO-ISIDECO.png" alt="">
+          <img style="padding-bottom: 10%; width: 85px;" src="<?php echo get_template_directory_uri(); ?>/assets/img/Plural.png" alt="">
           <div class="buttons">
          <a target="_blank" href="http://isideco.co/">
             <div style="font-size: 13px;" class="button">Más info</div></a>
@@ -198,6 +198,43 @@ body{
   $('.nav-item').click(function () {
   responsiveBtnIcon.classList.toggle("--is-open");
   navMenu.classList.toggle("--is-open");
+});
+
+$('a').click(function () {
+  $('html, body').animate({
+    scrollTop: $($(this).attr('href')).offset().top
+  }, 500);
+  return false;
+});
+
+// Cache selectors
+var topMenu = $(".menu-left"),
+  topMenuHeight = topMenu.outerHeight() + 15,
+  // All list items
+  menuItems = topMenu.find("a"),
+  // Anchors corresponding to menu items
+  scrollItems = menuItems.map(function () {
+    var item = $($(this).attr("href"));
+    if (item.length) { return item; }
+  });
+
+// Bind to scroll
+$(window).scroll(function () {
+  // Get container scroll position
+  var fromTop = $(this).scrollTop() + topMenuHeight;
+
+  // Get id of current scroll item
+  var cur = scrollItems.map(function () {
+    if ($(this).offset().top < fromTop)
+      return this;
+  });
+  // Get the id of the current element
+  cur = cur[cur.length - 1];
+  var id = cur && cur.length ? cur[0].id : "";
+  // Set/remove active class
+  menuItems
+    .parent().removeClass("active")
+    .end().filter("[href='#" + id + "']").parent().addClass("active");
 });
 
   </script>

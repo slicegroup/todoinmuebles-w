@@ -28,6 +28,10 @@
     height: 120vh;
   }
 
+  .cont-todo{
+    width: auto;
+  }
+
   .btn-whatsapp i {
     bottom: 7rem;
   }
@@ -39,6 +43,7 @@
   h2 {
     font-size: 30px;
   }
+
 
   h3{
     font-size: 15px;
@@ -126,14 +131,14 @@
 }
 
   .caraterics {
-display: block;
-width: auto;
+    display: block;
+    width: auto;
     text-align: center;
     padding-top: 30px;
 }
-.card-body{
-  width: 100%!important;
-}
+  .card-body{
+    width: 100%!important;
+  }
 .file-two img {
   
     width: 100%!important;
@@ -156,7 +161,6 @@ width: auto;
 
   .nav__menu.--is-open {
     transform: translate(0, 0);
-    height: 100vh;
     padding: 123px;
     text-align: center;
     display: flex;
@@ -195,6 +199,10 @@ width: auto;
 
   #checkboxes {
     text-align: initial;
+  }
+
+  .footer_copy{
+    display: block;
   }
 }
 
@@ -253,6 +261,10 @@ width: auto;
 .content-product1 {
     width: 50%;
     margin-left: 7%;
+}
+
+.footer_copy{
+  width: auto;
 }
 	
 .serv-bg {

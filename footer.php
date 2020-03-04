@@ -1,5 +1,11 @@
 <footer class="copy">
-  <p>Copyright / TODOINMUEBLES 2020 / Powered by Slice</p>
+<div class="footer_copy">
+<p><i class="fa fa-phone" aria-hidden="true"></i>4752381</p>
+<p><i class="fa fa-whatsapp" aria-hidden="true"></i>3008684986</p>
+<p>@todoinmuebles.mde</p>
+<p>www.todoinmuebles.com.co</p>
+</div>
+  <p>Copyright / TODOINMUEBLES 2020 / Powered by Slice / Design by Photogrammar</p>
 </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>

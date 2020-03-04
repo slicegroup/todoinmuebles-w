@@ -46,33 +46,37 @@
   .slick-prev:before,
   .slick-next:before {
     font-family: "slick";
-    font-size: 30px;
+    font-size: 65px;
     font-weight: bold;
     line-height: 1;
-    color: #011638;
+    color: #2d3e54!important;
     opacity: 0.75;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
 
 .slick-prev {
-  left: -45px; }
+  left: 10px;
+    z-index: 99;
+    top: 30px;}
   [dir="rtl"] .slick-prev {
     left: auto;
     right: -25px; }
   .slick-prev:before {
-    content: "🡠"; }
+    content: "‹"; }
     [dir="rtl"] .slick-prev:before {
-      content: "🡢"; }
+      content: "›"; }
 
 .slick-next {
-  right:  -45px; }
+  right: 10px;
+   z-index: 99;
+    top: 30px; }
   [dir="rtl"] .slick-next {
     left: -25px;
     right: auto; }
   .slick-next:before {
-    content: "🡢"; }
+    content: "›"; }
     [dir="rtl"] .slick-next:before {
-      content: "🡠"; }
+      content: "‹"; }
 
 /* Dots */
 .slick-dotted.slick-slider {
@@ -121,7 +125,7 @@
         font-size: 15px;
         line-height: 20px;
         text-align: center;
-        color: #011638;
+        color: #2d3e54!important;
         opacity: 0.25;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale; }

@@ -96,11 +96,10 @@
               <select name="precio" id="precio" class="selectop goog-te-combo" data-select2-id="select-min-price" tabindex="-1"
                 aria-hidden="true">
                 <option value=""></option>
-                <option value="300000"> Menor a $300,000</option>
-                <option value="$900,000"> Menor a $ 900,000 </option>
-                <option value="1200000">Menor a $1,200,000</option>
-                <option value="2000000"> Menor a $ 2,000,000</option>
-                <option value="2500000">Mayor a $2,500,000</option>
+                <option value="$ 900,000"> $ 900,000 </option>
+                <option value="$ 1,100,000">$ 1,100,000</option>
+                <option value="$ 1,150,000">$ 1,500,000</option>
+                <option value="$ 2,800,000">$ 2,800,000</option>
               </select>
           </div>
           <!-- <div class="selectop">
@@ -224,7 +223,7 @@
       var piscina = ''
       var saloncomunal = ''
       var zona = ''
-
+  
             $('#ubication').change(function() {
               ubication = $(this).val()
               renderCards()

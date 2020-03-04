@@ -197,11 +197,11 @@
 
       var html = ` <div class="content-product">
                     <h3 class="price">${property['Valor_arriendo']}</h3>
-                    <h4>Apartamento en Arriendo</h4>
+                    <h4 class="subtitle">Apartamento en Arriendo</h4>
                     <hr></hr>
                     <div class="info-place">
-                    <h4 class="price">${property['Ciudad']}</h4>
-                      <h4 class="price">${property['C_digo']}</h4>
+                    <h4 class="price" style="font-size: 22px;">${property['Ciudad']}</h4>
+                      <h4 class="price ">Cód: ${property['C_digo']}</h4>
                     </div>
                     <div class="slider-for" >
                       <div class="item" >
@@ -271,42 +271,42 @@
                   <div class="content-product1">
                     <div class="detail">
                       <div  class="caraterics">
-                        <img style="" src="<?php echo get_template_directory_uri(); ?>/assets/img/bed.svg" alt="">
-                        <p> 3 Habitaciones</p>
+                        <img style="" src="<?php echo get_template_directory_uri(); ?>/assets/img/habitaciones.png" alt="">
+                        <p> 3 <span>Habitaciones</span></p>
                       </div>  
                           <div  class="caraterics">
-                        <img style="" src="<?php echo get_template_directory_uri(); ?>/assets/img/bathroom.svg" alt="">
-                        <p> ${property['Ba_os']} Baños</p> 
+                        <img style="" src="<?php echo get_template_directory_uri(); ?>/assets/img/baños.png" alt="">
+                        <p> ${property['Ba_os']} <span>Baños</span></p> 
                       </div>  
                           <div  class="caraterics">
-                        <img style="" src="<?php echo get_template_directory_uri(); ?>/assets/img/house.svg" alt="">
-                        <p>${property['A_o_construcci_n']} Año</p>
+                        <img style="" src="<?php echo get_template_directory_uri(); ?>/assets/img/anti.png" alt="">
+                        <p>${property['A_o_construcci_n']} <span>Año</span></p>
                       </div>  
                           <div  class="caraterics">
-                        <img style="" src="<?php echo get_template_directory_uri(); ?>/assets/img/tape-measure.svg" alt="">
-                        <p>${property['M2']} m²</p>
+                        <img style="" src="<?php echo get_template_directory_uri(); ?>/assets/img/area.png" alt="">
+                        <p>${property['M2']} <span>m²</span></p>
                       </div>  
                           <div  class="caraterics">
-                        <img style="" src="<?php echo get_template_directory_uri(); ?>/assets/img/area (1).svg" alt="">
-                        <p> $13,636/m²</p>
+                        <img style="" src="<?php echo get_template_directory_uri(); ?>/assets/img/m2.png" alt="">
+                        <p> $13,636<span>/m²</span></p>
                       </div>  
                           <div  class="caraterics">
-                        <img style="" src="<?php echo get_template_directory_uri(); ?>/assets/img/parking-lot.svg" alt="">
-                        <p> ${property['Parqueaderos']} Parqueaderos</p>
+                        <img style="" src="<?php echo get_template_directory_uri(); ?>/assets/img/parqueaderos.png" alt="">
+                        <p> ${property['Parqueaderos']} <span>Parqueaderos<span></p>
                       </div>  
-                      <hr class="clas-carac"></hr>
+                      <hr class="clas-carac" style="width: 87%;"></hr>
                       <div class="caract">
                         <div class="caract-one">
                           <p>Características</p>
                           <ul>
                             <li>Estrato: ${property['Estrato']}</li>
                             <li>Tipo Cocina: ${property['Topo_cocina']} </li>
-                            <li>Zona Lavanderia: ${property['Zona_lavanderia']} </li>
+                            <li>Zona Lavandería: ${property['Zona_lavanderia']} </li>
                             <li>Tipo Pisos: ${property['Tipo_pisos']} </li>
                             <li>Tipo Estufa: ${property['Tipo_estufa']}</li>
-                              <li>Tipo Calentador: ${property['Tipo_calentador']}</li>
-                                <li>Vista Panorámica: ${property['Vista_panoramica']} </li>
-                              <li>Vigilancia: ${property['Vigilancia']}</li>
+                            <li>Tipo Calentador: ${property['Tipo_calentador']}</li>
+                            <li>Vista Panorámica: ${property['Vista_panoramica']} </li>
+                            <li>Vigilancia: ${property['Vigilancia']}</li>
                           </ul>
                         </div>
                         <div class="caract-two">
@@ -315,13 +315,13 @@
                             <li>Jardines y Colegios: ${property['Jardin']}</li>
                             <li>Parques: ${property['Parqueadero_visitantes']}  </li>
                             <li>Alcobas: ${property['Alcobas']} </li>
-                            <li>Balcon: ${property['Balc_n']} </li>
+                            <li>Balcón: ${property['Balc_n']} </li>
                             <li>Gas domiciliario: ${property['Gas_domiciliario']} </li>
                             <li>Permite Mascotas: ${property['Permite_mascota']} </li>
                           </ul>
                         </div>
                       </div>
-                      <hr style="margin-top: 0rem;"></hr>
+                      <hr style="margin-top: 0rem; width: 87%;"></hr>
                       <div class="gastos">
                         <p style="font-weight:bold;">Gastos Mensuales</p>
                         <div class="more-info">
@@ -330,20 +330,20 @@
                             <p  style="font-weight:bold;">$1.200.000</p>
                           </div>
                           <div class="propiedad">
+                          <p>Luz</p>
+                          <p  style="font-weight:bold;">${property['Luz']}</p>
+                        </div>
+                        <div class="propiedad">
+                        <p>Acueducto </p>
+                        <p  style="font-weight:bold;">${property['Acueducto']}</p>
+                      </div>
+                          <div class="propiedad">
                             <p>Administración</p>
                             <p  style="font-weight:bold;">${property['Vr_administraci_n']}</p>
                           </div>
                             <div class="propiedad">
-                            <p>Luz</p>
-                            <p  style="font-weight:bold;">${property['Luz']}</p>
-                          </div>
-                            <div class="propiedad">
-                            <p>Gas Natural  </p>
+                            <p>Gas Natural </p>
                             <p  style="font-weight:bold;">${property['Gas_natural']}</p>
-                          </div>
-                            <div class="propiedad">
-                            <p>Acueducto </p>
-                            <p  style="font-weight:bold;">${property['Acueducto']}</p>
                           </div>
                             <div class="propiedad">
                             <p>Telefonía/Internet</p>
@@ -358,7 +358,7 @@
                       <p>mensuales</p>
                           <p>${property['Total_gastos']}</p>
                       </div>
-                      <hr class="re-line"></hr>
+                      <hr class="re-line" style="width: 87%;"></hr>
                     </div>
                     </div>
                 `
@@ -367,7 +367,7 @@
     $('.slider-for').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
-      arrows: true,
+      arrows:false,
       fade: true,
       asNavFor: '.slider-nav',
       responsive: [
@@ -375,17 +375,16 @@
                 breakpoint: 700,
                 settings: {
                     arrows: false,
-                
                 }
             }
         ]
       });
 $('.slider-nav').slick({
-  slidesToShow: 3,
+  slidesToShow: 2,
   slidesToScroll: 1,
   asNavFor: '.slider-for',
   dots: false,
-  arrows: false,
+  arrows: true,
   focusOnSelect: true
 
 });
@@ -428,7 +427,7 @@ $('.slider-nav').slick({
     <style>
       .content-information{
         height: max-content;
-        padding-bottom: 100px;
+        padding-bottom: 200px;
       }
 
       .content-product1{
@@ -445,6 +444,7 @@ $('.slider-nav').slick({
           width: 100%;
     height: 100px;
     object-fit: cover;
+        padding-right: 2px;
       }
     </style>
   <?php get_footer(); ?>
