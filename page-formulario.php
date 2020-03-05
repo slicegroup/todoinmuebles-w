@@ -96,10 +96,10 @@
               <select name="precio" id="precio" class="selectop goog-te-combo" data-select2-id="select-min-price" tabindex="-1"
                 aria-hidden="true">
                 <option value=""></option>
-                <option value="$ 900,000"> $ 900,000 </option>
-                <option value="$ 1,100,000">$ 1,100,000</option>
-                <option value="$ 1,150,000">$ 1,500,000</option>
-                <option value="$ 2,800,000">$ 2,800,000</option>
+                <option value="300000"> Menor de $ 300,000 </option>
+                <option value="800000">Menor de $ 800,000 </option>
+                <option value="1200000">Menor de $ 1,200,000</option>
+                <option value="2800000"> Mayor de $ 2,800,000</option>
               </select>
           </div>
           <!-- <div class="selectop">
@@ -112,7 +112,7 @@
                 <option value="No">No</option>
               </select>
           </div> -->
-          <div class="selectop">
+           <div class="selectop">
             <label for="area">
               Área (m²) </label>
               <select onchange="ShowSelected();" name="metros" id="metros" tabindex="-1" aria-hidden="true">
@@ -126,7 +126,7 @@
              </div>
 
 
-            <div class="selectop">
+            <!-- <div class="selectop">
               <label for="antiguedad">
                 Antigüedad </label>
                 <select onchange="ShowSelected();" name="anti" id="anti" tabindex="-1" aria-hidden="true">
@@ -135,7 +135,7 @@
                   <option value="1987">1987</option>
                   <option value="2010">2010</option>
                 </select>
-            </div>
+            </div> -->
 
             <div class="selectop" id="want" >
               <label for="want">
@@ -254,10 +254,10 @@
               renderCards()
             })
 
-            $('#anti').change(function() {
-              anti = $(this).val()
-              renderCards()
-            })
+            // $('#anti').change(function() {
+            //   anti = $(this).val()
+            //   renderCards()
+            // })
 
             $('#Ascensor').change(function() {
               var check = $("#Ascensor:checked")[0];
@@ -331,12 +331,41 @@
 
             if (precio != '') {
               filteredData = data.filter(function(e) {
-                return e['Valor_arriendo'] < $(this).val();
+                const val = e['Valor_arriendo'].replace(/,|\$/g, '').trim()
+                // console.log(' asdasda ', val, $(this).val())
+                // debugger 
+                return parseInt(val) < parseInt(precio);
+                
               })
             }
-            //    if (precio != '') {
+
+               if (precio != '') {
+              filteredData = data.filter(function(e) {
+                const val = e['Valor_arriendo'].replace(/,|\$/g, '').trim()
+                // console.log(' asdasda ', val, $(this).val())
+                // debugger 
+                return parseInt(val) >= parseInt(precio);
+                
+              })
+            }
+
+            //  if (metros != '') {
             //   filteredData = data.filter(function(e) {
-            //     return e['Valor_arriendo'] == precio
+            //     const val = e['M2'].replace(/,|\$/g, '').trim()
+            //     // console.log(' asdasda ', val, $(this).val())
+            //     // debugger 
+            //     return parseInt(val) < parseInt(metros);
+
+            //   })
+            // }
+
+            // if (metros != '') {
+            //   filteredData = data.filter(function(e) {
+            //     const val = e['M2'].replace(/,|\$/g, '').trim()
+            //     // console.log(' asdasda ', val, $(this).val())
+            //     // debugger
+            //     return parseInt(val) >= parseInt(metros);
+
             //   })
             // }
 
@@ -346,11 +375,11 @@
               })
             }
 
-            if (anti != '') {
-              filteredData = data.filter(function(e) {
-                return e['A_o_construcci_n'] == anti
-              })
-            }
+            // if (anti != '') {
+            //   filteredData = data.filter(function(e) {
+            //     return e['A_o_construcci_n'] == anti
+            //   })
+            // }
 
             if (Ascensor === 'Si') {
               filteredData = data.filter(function(e) {
@@ -381,9 +410,6 @@
                 return e['Zona_lavanderia'] == zona
               })
             }
-
-          
-
 
             console.log('filter', filteredData)
             if (filteredData.length != 0) {

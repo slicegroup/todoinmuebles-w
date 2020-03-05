@@ -30,6 +30,7 @@
 
   .cont-todo{
     width: auto;
+    align-items: end;
   }
 
   .btn-whatsapp i {
@@ -51,9 +52,21 @@
 
   h4{
     font-size: 15px;
-    padding: 20px;
   }
 
+  ul{
+    margin-left: 0;
+  }
+
+  .copy p{
+    margin: 6px;
+  }
+  hr{
+    width: auto!important;
+  }
+  .re-line{
+    width: auto!important;
+  }
   .btn-whatsapp img{
     height: 4rem;
     width: 4rem;
@@ -165,6 +178,7 @@
     text-align: center;
     display: flex;
     justify-content: center;
+        height: 100%;
   }
 
   .nav-item{
@@ -203,6 +217,7 @@
 
   .footer_copy{
     display: block;
+    width: auto;
   }
 }
 
